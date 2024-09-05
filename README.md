@@ -25,11 +25,12 @@
 
 1. Ensure you have SDL2 installed on your system
 2. Clone the repository: `git clone https://github.com/Mikonimo/3D-maze_explorer.git`
-3. N4. Compile the project:avigate to the project directory: `3D-maze_explorer`
+3. Compile the project: Navigate to the project directory: `cd 3D-maze_explorer`
 4. Compile the project: `make`
 ## Usage
 
 Run the compiled executable: `./3D-maze_explorer`
+
 Use the following controls:
 - W, A, S, D: Move forward, left, backward, right
 - Mouse or arrow keys: Rotate camera
@@ -44,7 +45,7 @@ This project is licensed under the MIT License - see the [LICENSE] file for deta
 - Inspired by Wolfenstein 3D and other classic first-person games
 - Thanks to the SDL2 community for their excellent documentation and support
 
-## Team
+## Author
 
 - Mark Manani: The Developer.
 
