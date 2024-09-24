@@ -1,24 +1,13 @@
-#makefile
-# Compiler
 CC = gcc
-# Compiler flags
-# CFLAGS = -Wall -Wextra -pedantic -Werror
-# Name of the executatables
-TARGET = maze
-# Source files
-SRCS = walls.c
-#Libraries
-LIBS =  -lSDL2
-# Object files
-OBJS = $(SRCS:.c=.o)
-# Default target
-all: $(TARGET)
-# Rule to create executables
-$(TARGET): $(OBJS)
-	$(CC) $< -o $@ $^ $(LIBS)
+CFLAGS =  -Wall -Wextra -pedantic -std=c99
+LDFLAGS = -lSDL2
 
-# Clean up
-clean:
-	rm -f $(OBJS) $(TARGET)
+SRC = src/main.c
+OBJ = $(SRC:.c=.o)
+INC = headers/headers.h
 
-.PHONY: all clean
+all: maze
+
+maze: $(OBJ) $(CC) $(CFLAGS) -o maze $(OBJ) $(LDFLAGS)
+
+clean: rm -f $(OBJ) maze
